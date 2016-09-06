@@ -8,9 +8,10 @@
 # Site settings
 title: Raum für ihr Recht
 description: ""
+author: "Niels Nübel"
 baseurl: ""
 url: "http://joomladaytemplate.niels-nuebel.de"
-googleanalyticss:  UA-XXXXX-1
+googleanalyticss:  UA-83736439-1
 
 # Build settings
 markdown: kramdown
@@ -22,30 +23,3 @@ sass:
   style: compressed
 
 repository: nielsnuebel/joomladaytemplate
-
-# Site nav
-nav:
-
-- name: Home
-  link: "/#home"
-  class: "scrollto"
-
-- name: VITA
-  link: "/#vita"
-  class: "scrollto"
-
-- name: Kanzleischwerpunkt
-  link: "/#schwerpunkte"
-  class: "scrollto"
-
-- name: Leistungskatalog
-  link: "/#leistungen"
-  class: "scrollto"
-
-- name: Veröffentlichungen
-  link: "/#veroeffentlichungen"
-  class: "scrollto"
-
-- name: Kontakt
-  link: "/#kontakt"
-  class: "scrollto"
