@@ -47,7 +47,6 @@ body {
 	letter-spacing: $headingLetterSpacing;
 
 	text-transform: $headingTextTransform;
-	text-shadow: $headingTextShadow;
 
 	word-wrap: break-word;
 }
@@ -57,9 +56,6 @@ body {
 .reveal h3 {font-size: $heading3Size; }
 .reveal h4 {font-size: $heading4Size; }
 
-.reveal h1 {
-	text-shadow: $heading1TextShadow;
-}
 
 
 /*********************************************

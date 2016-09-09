@@ -16,8 +16,14 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-//$backgroundColor: #222;
-$backgroundColor: #ffc926;
+$defaultbg: #222;
+$leipzig: #ffc926;
+
+$joomlayellow: #f6b332;
+$joomlared: #f6303e;
+$joomlablue: #318dde;
+$joomlagreen: #76bd1d;
+$backgroundColor: $leipzig;
 
 $mainColor: #fff;
 $headingColor: #fff;
@@ -25,7 +31,7 @@ $headingColor: #fff;
 $mainFontSize: 38px;
 $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingFont: 'bree-serif','Source Sans Pro', Helvetica, sans-serif;
-$headingTextShadow: none;
+$headingTextShadow: 0px 2px 3px #555;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
@@ -38,13 +44,29 @@ $heading2Size: 1.6em;
 $heading3Size: 1.3em;
 $heading4Size: 1.0em;
 
-section.has-light-background {
+/*section.has-light-background {
 	&, h1, h2, h3, h4, h5, h6 {
 		color: #222;
 	}
+}*/
+section.shadow {
+	&, h1, h2, h3, h4, h5, h6 {
+		text-shadow: $headingTextShadow;
+	}
 }
 
+.noupper {
+	text-transform: none !important;
+}
 
+html.joomlared body {background-color: $joomlared;}
+html.joomlablue body {background-color: $joomlablue;}
+html.joomlayellow body {background-color: $joomlayellow;}
+html.joomlagreen body {background-color: $joomlagreen;}
+
+html.animationgif .reveal .slide-background {
+	background-size: contain !important;
+}
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------

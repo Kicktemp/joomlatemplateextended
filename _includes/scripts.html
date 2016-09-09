@@ -9,8 +9,9 @@
         progress: true,
         history: true,
         center: true,
+        viewDistance: 2,
 
-        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
 
         // More info https://github.com/hakimel/reveal.js#dependencies
         dependencies: [
@@ -18,8 +19,14 @@
             { src: '{{ site.baseurl }}/assets/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
             { src: '{{ site.baseurl }}/assets/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
             { src: '{{ site.baseurl }}/assets/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+           /* { src: '{{ site.baseurl }}/assets/plugin/highlight/highlight.js', async: true, callback: function() {
+                [].forEach.call( document.querySelectorAll( '.highlight' ), function( v, i) {
+                    hljs.highlightBlock(v);
+                });
+            } },*/
             { src: '{{ site.baseurl }}/assets/plugin/zoom-js/zoom.js', async: true },
-            { src: '{{ site.baseurl }}/assets/plugin/notes/notes.js', async: true }
+            { src: '{{ site.baseurl }}/assets/plugin/notes/notes.js', async: true },
+            { src: '{{ site.baseurl }}/assets/js/highlightfragment.js', async: true }
         ]
     });
 

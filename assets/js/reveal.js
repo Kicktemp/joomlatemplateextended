@@ -2780,8 +2780,17 @@
 
 			// Restart GIFs (doesn't work in Firefox)
 			if( /\.gif/i.test( backgroundImageURL ) ) {
-				currentBackground.style.backgroundImage = '';
-				window.getComputedStyle( currentBackground ).opacity;
+				var searchstring = '.gif?currenttime=';
+				var timestamp = Math.floor(Date.now() / 1000)
+				var position = backgroundImageURL.indexOf(searchstring);
+				if(position !== -1) {
+					var oldtimestamp = backgroundImageURL.substr(position + searchstring.length, timestamp.length);
+					backgroundImageURL = backgroundImageURL.replace(oldtimestamp,timestamp);
+				}
+				else {
+					backgroundImageURL = backgroundImageURL.replace('.gif', searchstring + timestamp);
+				}
+
 				currentBackground.style.backgroundImage = backgroundImageURL;
 			}
 
