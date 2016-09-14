@@ -68,9 +68,48 @@ html.animationgif .reveal .slide-background {
 	background-size: contain !important;
 }
 
+[data-inline] .inline { &, * { color: deepskyblue; }}
+[data-inline] .inline.red { &, * { color: red; }}
+
 [data-fragment] .highlight-green.visible { &, * { color: #17ff2e; }}
+[data-fragment] .highlight-current-green.current-fragment { &, * { color: #17ff2e; }}
 [data-fragment] .highlight-red.visible { &, * { color: #ff2c2d; }}
+[data-fragment] .highlight-current-red.current-fragment { &, * { color: #ff2c2d !important; }}
 [data-fragment] .highlight-blue.visible { &, * { color: #1b91ff; }}
+[data-fragment] .highlight-current-highlight-blue.current-fragment { &, * { color: #1b91ff; }}
+[data-fragment] {
+	.fade-up,
+	.fade-down,
+	.fade-left,
+	.fade-right,
+	.grow
+	{ display: inline-block; }
+}
+
+.slide-background {
+	&.overlay-dark20:before,
+	&.overlay-dark30:before,
+	&.overlay-dark40:before,
+	&.overlay-dark50:before,
+	&.overlay-dark60:before,
+	&.overlay-dark70:before,
+	&.overlay-dark80:before {
+		left: 0;
+		top: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		content: "";
+	}
+
+	&.overlay-dark20:before {background-color: rgba(34,34,34,0.2)}
+	&.overlay-dark30:before {background-color: rgba(34,34,34,0.3)}
+	&.overlay-dark40:before {background-color: rgba(34,34,34,0.4)}
+	&.overlay-dark50:before {background-color: rgba(34,34,34,0.5)}
+	&.overlay-dark60:before {background-color: rgba(34,34,34,0.6)}
+	&.overlay-dark70:before {background-color: rgba(34,34,34,0.7)}
+	&.overlay-dark80:before {background-color: rgba(34,34,34,0.8)}
+}
 
 // Theme template ------------------------------
 @import "../template/theme";
