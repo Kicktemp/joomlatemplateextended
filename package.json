@@ -1,26 +1,28 @@
 {
-  "name": "joomladaytemplate",
+  "name": "presentation_blank",
   "version": "1.0.0",
-  "description": "Presentation about creating Joomla Templates",
+  "description": "Presentation about creating a REVEAL.js Presentation with Jekyll ",
   "main": "_site/index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/nielsnuebel/joomladaytemplate.git"
+    "url": "git://github.com/kicktemp/yoothemepro_showcase.git"
   },
-  "author": "Niels Nuebel <niels@niels-nuebel.de>",
+  "author": "Niels Nübel <niels@kicktemp.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nielsnuebel/joomladaytemplate/issues"
+    "url": "https://github.com/kicktemp/yoothemepro_showcase/issues"
   },
-  "homepage": "https://github.com/nielsnuebel/joomladaytemplate#readme",
+  "homepage": "https://github.com/kicktemp/yoothemepro_showcase#readme",
+  "dependencies": {
+    "chart.js": "^2.8.0",
+    "gitgraph.js": "^1.15.1",
+    "reveal.js": "^3.7.0"
+  },
   "devDependencies": {
-    "browser-sync": "^2.13.0",
+    "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
-    "gulp-shell": "^0.5.2",
-    "gulp-rename": "^1.2.2",
-    "lodash": "^4.14.0"
+    "gulp-rename": "^1.4.0",
+    "gulp-shell": "^0.7.0",
+    "lodash": "^4.17.11"
   }
 }
